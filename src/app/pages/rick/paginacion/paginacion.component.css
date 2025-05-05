@@ -1,3 +1,30 @@
 .page-item{
   cursor:pointer;
 }
+.pagination {
+  background-color: #00b894 !important;
+  border-radius: 10px;
+  padding: 5px 0;
+}
+
+.page-item .page-link {
+  color: white !important;
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+  background-color: transparent; /* Asegura que el fondo de los botones sea transparente */
+}
+
+.page-item .page-link:hover {
+  background-color: #065471 !important;
+  color: white !important;
+}
+
+.page-item.disabled .page-link {
+  color: #ccc !important;
+}
+
+.page-item.disabled .page-link:hover {
+  background-color: transparent !important;
+}

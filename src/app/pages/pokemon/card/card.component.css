@@ -1,4 +1,4 @@
-.fixed-card{
+.fixed-card {
     width: 100%;
     height: 250px;
     display: flex;
@@ -6,20 +6,64 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-}
-
-.fixed-img{
+    border-radius: 16px;
+    background: linear-gradient(135deg, #dff6ff, #ffffff); /* azul celeste suave + blanco */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .fixed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  }
+  
+  .fixed-img {
     width: auto;
     height: 100px;
     max-width: 80%;
     object-fit: contain;
-}
-
-.fixed-body{
+    margin-top: 10px;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
+  }
+  
+  .fixed-body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-}
+    padding: 10px;
+    background-color: #f4fcff; /* celeste aún más suave */
+    width: 100%;
+  }
+  
+  .card-title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #065471; /* azul petróleo */
+    margin-bottom: 6px;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    color: #3d5a6c; /* gris azulado fuerte */
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-outline-primary {
+    border: none;
+    border-radius: 25px;
+    background-color: #00b894; /* verde azulado */
+    color: white;
+    padding: 6px 14px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #019875;
+  }
+  

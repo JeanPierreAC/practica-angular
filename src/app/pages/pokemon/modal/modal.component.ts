@@ -8,6 +8,7 @@ import { platform } from "os";
   standalone: true,
   imports: [NgFor, NgIf, TitleCasePipe],
   templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.css'],
   styles: ''
 })
 export class ModalComponent {

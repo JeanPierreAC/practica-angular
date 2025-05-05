@@ -7,6 +7,7 @@ import { Rick } from "../interfaces/ricks"; // Asegúrate de que esta interfaz s
   standalone: true,
   imports: [NgFor, NgIf, TitleCasePipe],
   templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.css'],
   styles: ''
 })
 export class ModalComponent implements AfterViewInit {

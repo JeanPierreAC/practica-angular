@@ -1,0 +1,60 @@
+.navbar {
+    background-color: #00b894 !important; /* Asegura que el color verde se aplique */
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .nav-item .nav-link {
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .nav-item .nav-link:hover {
+    color: #065471;
+  }
+  
+  .nav-item .active {
+    color: #065471;
+    font-weight: bold;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: white;
+  }
+  
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+  
+  .form-control {
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #065471;
+  }
+  
+  .btn-outline-success {
+    border-radius: 25px;
+    border-color: #065471;
+    color: #065471;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #065471;
+    color: white;
+  }
+  
