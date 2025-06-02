@@ -2,26 +2,32 @@
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="rickModalLabel">Detalles de {{ rick?.name | titlecase }}</h5>
+        <h5 class="modal-title" id="rickModalLabel">Detalles de {{ rick.name | titlecase }}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       
       <div class="modal-body" *ngIf="rick">
         <div class="row">
           <div class="col-md-6 text-center">
-            <img [src]="rick?.image || '#'" [alt]="rick?.name" class="img-fluid mb-3 rounded">
-            <p><strong>ID:</strong> {{ rick?.id }}</p>
-            <p><strong>Género:</strong> {{ rick?.gender }}</p>
-            <p><strong>Estado:</strong> {{ rick?.status }}</p>
-            <p><strong>Especie:</strong> {{ rick?.species }}</p>
-            <p><strong>Tipo:</strong> {{ rick?.type || 'N/A' }}</p>
+            <img 
+              [src]="rick.image || 'assets/placeholder.png'" 
+              [alt]="rick.name" 
+              class="img-fluid mb-3 rounded"
+              loading="lazy"
+              
+            >
+            <p><strong>ID:</strong> {{ rick.id }}</p>
+            <p><strong>Género:</strong> {{ rick.gender }}</p>
+            <p><strong>Estado:</strong> {{ rick.status }}</p>
+            <p><strong>Especie:</strong> {{ rick.species }}</p>
+            <p><strong>Tipo:</strong> {{ rick.type || 'N/A' }}</p>
           </div>
           
           <div class="col-md-6">
             <h6><strong>Origen:</strong></h6>
-            <p>{{ rick?.origin?.name }}</p>
+            <p>{{ rick.origin.name }}</p>
             <h6><strong>Ubicación actual:</strong></h6>
-            <p>{{ rick?.location?.name }}</p>
+            <p>{{ rick.location.name }}</p>
             <h6><strong>Episodios:</strong></h6>
             <ul class="list-unstyled">
               <li *ngFor="let ep of rick?.episode">

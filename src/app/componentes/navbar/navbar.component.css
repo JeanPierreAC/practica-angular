@@ -58,3 +58,6 @@
     color: white;
   }
   
+  img.rounded-circle{
+    border-radius: 50%;
+  }

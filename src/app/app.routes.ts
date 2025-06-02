@@ -4,6 +4,7 @@ import { PokemonComponent } from './pages/pokemon/pokemon.component';
 import { RickComponent } from './pages/rick/rick.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { CoctelesComponent } from './pages/cocteles/cocteles.component';
+import { AuthGuard } from './guard/auth.guard';
 
 export const routes: Routes = [
     {path: '' ,redirectTo: 'home',pathMatch:'full'},
@@ -11,6 +12,10 @@ export const routes: Routes = [
     {path:'pokemon', component: PokemonComponent},
     {path:'cocteles',component: CoctelesComponent},
     {path: 'rick', component: RickComponent},
-    {path:'miapi', loadChildren: () => import('./pages/miapi/miapi-routing.module').then(m => m.MiapiRoutingModule)},
+    {path:'miapi', 
+        
+        loadChildren: () => import('./pages/miapi/miapi-routing.module').then(m => m.MiapiRoutingModule),
+        canActivate: [AuthGuard]
+    },
     {path: '**', component: ErrorComponent }
 ];
